@@ -1,5 +1,5 @@
 {
-  "name": "Claude Code Sandbox",
+  "name": "Claude-in-a-Box",
   "build": {
     "dockerfile": "Dockerfile",
     "args": {
@@ -10,6 +10,14 @@
   },
   "runArgs": ["--cap-add=NET_ADMIN", "--cap-add=NET_RAW"],
   "customizations": {
+    "cursor": {
+      "extensions": [
+        "anthropic.claude-code",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "eamodio.gitlens"
+      ]
+    },
     "vscode": {
       "extensions": [
         "anthropic.claude-code",

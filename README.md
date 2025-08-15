@@ -5,9 +5,10 @@ An environment for running Claude Code in "dangerous mode" while inside the rela
 ## Features
 
 - **Claude Code CLI** - Latest version installed with dangerous mode enabled for full container permissions
+- **Claude Code Extension** - VS Code/Cursor extension for easy in-editor AI assistance
 - **CCPlugins** - Powerful Claude plugins for enhanced coding capabilities
 - **Awesome Claude Agents** - Collection of specialized AI agents for various coding tasks
-- **VS Code Extensions** Claude Code, ESLint, Prettier, GitLens
+- **Developer Extensions** - ESLint, Prettier, GitLens (automatically installed)
 
 ## Beginner's Guide
 
@@ -83,11 +84,23 @@ First, you'll need to install these programs on your computer:
    - All the tools you need for development
 
 ### Step 5: Start Coding with AI
+You now have multiple ways to interact with Claude:
+
+**Option 1: Claude Extension (Easiest)**
+- Look for the Claude icon in your editor's sidebar
+- Click it to open the Claude panel for in-editor assistance
+- Perfect for quick questions and code help
+
+**Option 2: Claude CLI (Most Powerful)**
 - Open the terminal in your editor (`Terminal` → `New Terminal`)
-- Type `claude` to interact with Claude Code CLI
-- If using Cursor: Use its built-in AI features alongside Claude for maximum productivity
-- If using VS Code: Enjoy the classic experience with Claude's powerful assistance
-- All tools are pre-configured and ready to use!
+- Type `claude` to interact with Claude Code CLI in dangerous mode
+- Full file system access and advanced capabilities
+
+**Option 3: Editor-Specific AI (Cursor only)**
+- Use Cursor's built-in AI features alongside Claude
+- Multiple AI assistants working together!
+
+All tools are pre-configured and ready to use!
 
 ## Troubleshooting for Beginners
 
@@ -123,10 +136,11 @@ First, you'll need to install these programs on your computer:
 
 ## What's Included
 
-### Claude Code CLI
-- Installed with latest version and dangerous mode enabled
-- Full container permissions for unrestricted file system access
-- Configuration stored in `~/.claude/settings.json`
+### Claude Code CLI & Extension
+- **CLI**: Latest version installed with dangerous mode enabled for full container permissions
+- **Extension**: VS Code/Cursor sidebar extension for easy in-editor assistance  
+- **Configuration**: Dangerous mode settings stored in `~/.claude/settings.json`
+- **Best of both worlds**: Use the extension for quick help, CLI for advanced tasks
 
 ### CCPlugins
 - Automatically installed via the official installer script
