@@ -5,10 +5,13 @@ set -euxo pipefail  # Added -x for verbose/debug output
 echo "Installing Claude Code CLI..."
 npm install -g @anthropic-ai/claude-code@latest
 
-# Configure Claude to run in dangerous mode (full permissions in container)
-echo "Configuring Claude settings..."
-mkdir -p ~/.claude
-echo '{"dangerous": true}' > ~/.claude/settings.json
+# Claude aliases for tab convenience
+if [ ! -f ~/.claude/settings.json ]; then
+  cp /workspace/.devcontainer/settings.default.json ~/.claude/settings.json
+fi
+
+echo 'alias claude-dangerous="claude --dangerously-skip-permissions"' >> ~/.bashrc
+echo 'alias claude-dangerous="claude --dangerously-skip-permissions"' >> ~/.zshrc
 
 # Ensure pnpm store-dir is under the user home to avoid permissions / cross-device issues
 pnpm config set store-dir /home/node/.local/share/pnpm/store

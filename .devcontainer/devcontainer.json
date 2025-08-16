@@ -40,7 +40,10 @@
           "zsh": {
             "path": "zsh"
           }
-        }
+        },
+        "debug.javascript.autoAttachFilter": "disabled",
+        "debug.node.autoAttach": "off",
+        "js.suggest.autoImports": false
       }
     }
   },
@@ -49,10 +52,11 @@
     "source=claude-code-bashhistory-${devcontainerId},target=/commandhistory,type=volume",
     "source=claude-code-config-${devcontainerId},target=/home/node/.claude,type=volume"
   ],
-  "containerEnv": {
-    "NODE_OPTIONS": "--max-old-space-size=4096",
+  "remoteEnv": {
+    "NODE_OPTIONS": " --max-old-space-size=4096",
     "CLAUDE_CONFIG_DIR": "/home/node/.claude",
-    "POWERLEVEL9K_DISABLE_GITSTATUS": "true"
+    "POWERLEVEL9K_DISABLE_GITSTATUS": "true",
+    "VSCODE_JS_DEBUG_DISABLED": "true"
   },
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=delegated",
   "workspaceFolder": "/workspace",
